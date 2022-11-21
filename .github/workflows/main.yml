@@ -13,15 +13,4 @@ jobs:
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
-      - name: Directory Permissions
-        run: chmod -R 777 storage bootstrap/cache
-      - name: Create Database
-        run: |
-          mkdir -p database
-          touch database/database.sqlite
-      - name: Execute tests (Unit and Feature tests) via PHPUnit
-        env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: database/database.sqlite
-        run: vendor/bin/phpunit
+        run: docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php81-composer:latest composer install  -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
