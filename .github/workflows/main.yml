@@ -12,6 +12,6 @@ jobs:
       - name: Install Dependencies
         run: docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php81-composer:latest composer install  -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
       - name: Up Sail
-        run: ./vendor/bin/sail up
+        run: ./vendor/bin/sail up -d
       - name: list container
         run: docker ps
