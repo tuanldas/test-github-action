@@ -12,6 +12,6 @@ jobs:
       - name: Set alias sail
         run: alias sail='./vendor/bin/sail '
       - name: Up Sail
-        run: ./vendor/bin/sail up -d
+        run: sail up -d
       - name: Run test
         run: sail test
