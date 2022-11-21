@@ -4,4 +4,5 @@ jobs:
   prod-check:
     runs-on: ubuntu-latest
     steps:
-      - run: 'composer install'
+      - name: Install Dependencies
+          run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
