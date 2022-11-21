@@ -1,1 +1,7 @@
-
+name: CI
+on: push
+jobs:
+  prod-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to production server on branch $GITHUB_REF"
