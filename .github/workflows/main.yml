@@ -10,6 +10,7 @@ jobs:
       - name: Install Dependencies
         run: docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php81-composer:latest composer install  -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
       - name: Set alias sail
+        shell: bash
         run: |
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
           source ~/.bashrc
@@ -17,6 +18,7 @@ jobs:
       #          ./.github/workflows/script.sh
       #        shell: bash
       - name: Up sail
+        shell: bash
         run: |
           source ~/.bashrc
           sail up -d
