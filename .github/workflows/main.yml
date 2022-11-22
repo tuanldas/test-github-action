@@ -13,7 +13,8 @@ jobs:
         run: |
           shopt -s expand_aliases
           alias sail='./vendor/bin/sail '
-      - name: Up Sail
-        run: sail up -d
+          sail up -d
+#      - name: Up Sail
+#        run: sail up -d
 #      - name: Run test
 #        run: sail test
