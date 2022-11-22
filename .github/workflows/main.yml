@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
           source ~/.bashrc
-          cat  ~/.bashrc
+          sail
 
       #          chmod +x ./.github/workflows/script.sh
       #          ./.github/workflows/script.sh
