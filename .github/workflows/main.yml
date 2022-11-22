@@ -12,8 +12,9 @@ jobs:
       - name: Set alias sail
         run: |
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
-#          chmod +x ./.github/workflows/script.sh
-#          ./.github/workflows/script.sh
-#        shell: bash
+          source ~/.bashrc
+      #          chmod +x ./.github/workflows/script.sh
+      #          ./.github/workflows/script.sh
+      #        shell: bash
       - name: Up sail
         run: sail up -d
