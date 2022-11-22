@@ -12,10 +12,10 @@ jobs:
       - name: Set alias sail
         shell: bash
         run: |
-          echo 'shopt -s expand_aliases'  >> ~/.bashrc
+          echo 'shopt -s expand_aliases'  > ~/.bashrc
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
           source ~/.bashrc
-          ./vendor/bin/sail
+          sail
 
       #          chmod +x ./.github/workflows/script.sh
       #          ./.github/workflows/script.sh
