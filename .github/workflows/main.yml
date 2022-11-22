@@ -11,7 +11,6 @@ jobs:
         run: docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php81-composer:latest composer install  -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --ignore-platform-reqs
       - name: Set alias sail
         run: |
-          ls -al
-#          chmod +x ./script.sh
-#          ./public/scripts/test.sh
-#        shell: bash
+          chmod +x ./.github/workflows/script.sh
+          ./.github/workflows/script.sh
+        shell: bash
