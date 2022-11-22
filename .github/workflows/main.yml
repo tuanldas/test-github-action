@@ -17,4 +17,6 @@ jobs:
       #          ./.github/workflows/script.sh
       #        shell: bash
       - name: Up sail
-        run: sail up -d
+        run: |
+          source ~/.bashrc
+          sail up -d
