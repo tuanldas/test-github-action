@@ -15,7 +15,7 @@ jobs:
           echo 'shopt -s expand_aliases'  >> ~/.bashrc
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
           source ~/.bashrc
-          sail
+          ./vendor/bin/sail
 
       #          chmod +x ./.github/workflows/script.sh
       #          ./.github/workflows/script.sh
