@@ -12,6 +12,7 @@ jobs:
       - name: Set alias sail
         shell: bash
         run: |
+          echo 'shopt -s expand_aliases'  >> ~/.bashrc
           echo "alias sail='./vendor/bin/sail '" >> ~/.bashrc
           source ~/.bashrc
           sail
