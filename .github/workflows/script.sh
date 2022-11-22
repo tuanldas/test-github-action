@@ -1,2 +1,2 @@
-alias sail='./vendor/bin/sail '
-sail up -d
+alias sail='./vendor/bin/sail ' \
+    sail up -d
